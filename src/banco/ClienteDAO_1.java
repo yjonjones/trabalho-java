@@ -40,7 +40,7 @@ class ClienteDAO_1 {
             );
             st.setInt(1, cliente.numCliente);
             st.setString(2, cliente.nome);
-            st.setInt(3, cliente.cpf);
+            st.setString(3, cliente.cpf);
             st.setInt(4, cliente.telefone);
             st.executeUpdate(); // Executa a inserção
         } catch (ClassNotFoundException | SQLException ex) {
@@ -78,7 +78,7 @@ class ClienteDAO_1 {
                 clientes.add(new Cliente(
                     rs.getInt(1),
                     rs.getString(2),
-                    rs.getInt(3),
+                    rs.getString(3),
                     rs.getInt(4)
                 ));
             }

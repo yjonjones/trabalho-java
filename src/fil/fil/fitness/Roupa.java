@@ -1,25 +1,25 @@
 package fil.fil.fitness;
 public abstract class Roupa {
     
-    private int numRoupa;
-    private String tamanho;
-    private String cor;
-    private float preço;
-    private int quantidadeDisponivel;
-    private String statusEstoque;
-    private boolean disponibilidade ;
+   public static int numRoupa;
+    public static String tamanho;
+    public static String cor;
+    public static float preço;
+    public static int quantidadeDisponivel;
+    public static String statusEstoque;
 
 
 public Roupa(int numRoupa, String tamanho, String cor, float preço, int quantidadeDisponivel, String statusEstoque){
     
-    this.numRoupa = numRoupa;
-    this.tamanho = tamanho;
-    this.cor = cor;
-    this.preço = preço;
-    this.quantidadeDisponivel = quantidadeDisponivel;
-    this.statusEstoque = statusEstoque;
+    Roupa.numRoupa = numRoupa;
+    Roupa.tamanho = tamanho;
+    Roupa.cor = cor;
+    Roupa.preço = preço;
+    Roupa.quantidadeDisponivel = quantidadeDisponivel;
+    Roupa.statusEstoque = statusEstoque;
    }
-
+ Roupa() {
+    }
 public String getDetalhes(){
     return "Número da Roupa: " + numRoupa +
             "\nTamanho: " + tamanho +
@@ -46,25 +46,5 @@ public int getNumRoupa() {
 
     public int getQuantidadeDisponivel() {
         return quantidadeDisponivel;
-    }
-
-    public boolean Disponibilidade(){
-          if (quantidadeDisponivel > 0 ) {
-              disponibilidade = true;
-          }
-          else{
-              disponibilidade = false;
-          }
-          return disponibilidade;
-         }
-    
-    public String getStatusEstoque() {
-        if (disponibilidade == true){
-            statusEstoque = "disponivel";
-        }
-        else{
-        statusEstoque = "não disponivel";
-        }
-        return statusEstoque;
     }
 }
