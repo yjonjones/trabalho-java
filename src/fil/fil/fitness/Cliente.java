@@ -2,10 +2,10 @@ package fil.fil.fitness;
 public class Cliente {
     public int numCliente;
     public String nome;
-    public int cpf;
+    public String cpf;
     public int telefone;
     
-    public Cliente(int numCliente, String nome, int cpf, int telefone){
+    public Cliente(int numCliente, String nome, String cpf, int telefone){
     this.numCliente = numCliente;
     this.nome = nome;
     this.cpf = cpf;
@@ -22,7 +22,7 @@ public class Cliente {
         return nome;
     }
         
-            public int getcpf(){
+            public String getcpf(){
         return cpf;
     }
             
